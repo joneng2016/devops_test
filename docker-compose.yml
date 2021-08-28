@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  api:
+    image: container_to_test
+    build: "./"
+    container_name: machine_to_learn
+    ports:
+      - "80:80"
+    working_dir: /home
+    volumes: 
+        - ./storage:/home
