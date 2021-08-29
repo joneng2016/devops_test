@@ -7,6 +7,7 @@ COPY /to_copy/server_informations/simple_web_site/simple-web-site.conf /etc/ngin
 COPY /to_copy/server_informations/application/application.conf /etc/nginx/sites-available/application.conf
 COPY /to_copy/server_informations/nginx.conf /etc/nginx/nginx.conf
 
+
 COPY /to_copy/bash_scripts/start_script.sh /home/start_script.sh  
 
 RUN sh /home/start_script.sh
@@ -15,3 +16,6 @@ COPY /to_copy/simple_web_site/index.html /home/www/simple_web_site/index.html
 COPY /to_copy/bash_scripts/to_exec.sh /home/to_exec.sh
 
 COPY /to_copy/application /home/www/application
+
+RUN chmod 777 /home/to_exec.sh
+# Set the port to 80 

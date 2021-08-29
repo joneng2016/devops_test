@@ -1,1 +1,1 @@
-docker run -v "/home/www/devops_tests/storage":"/home" -i -t container_to_test:latest /bin/bash
+docker run -d -i -t container_to_test:latest /bin/bash
